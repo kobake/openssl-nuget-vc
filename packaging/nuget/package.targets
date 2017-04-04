@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- general -->
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- static libraries -->
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>libssl.lib;libcrypto.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- dynamic libraries -->
+  <Target Name="openssl-vc141_AfterBuild" AfterTargets="AfterBuild">
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)bin\libssl-1_1.dll"    DestinationFiles="$(TargetDir)libssl-1_1.dll"    SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(MSBuildThisFileDirectory)bin\libcrypto-1_1.dll" DestinationFiles="$(TargetDir)libcrypto-1_1.dll" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

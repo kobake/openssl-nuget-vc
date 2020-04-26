@@ -19,13 +19,13 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="package.targets" target="build\native\openssl-vc141.targets" />
+        <file src="package.targets"                target="build\native\openssl-vc141.targets" />
 
-        <file src="..\..\openssl\include\openssl\*.h" target="build\native\include\openssl\" />
+        <file src="..\openssl\include\openssl\*.h" target="build\native\include\openssl\" />
 
-        <file src="..\..\openssl\libssl.lib"          target="build\native\bin\" />
-        <file src="..\..\openssl\libcrypto.lib"       target="build\native\bin\" />
-        <file src="..\..\openssl\libssl-1_1.dll"      target="build\native\bin\" />
-        <file src="..\..\openssl\libcrypto-1_1.dll"   target="build\native\bin\" />
+        <file src="..\openssl\libssl.lib"          target="build\native\bin\" />
+        <file src="..\openssl\libcrypto.lib"       target="build\native\bin\" />
+        <file src="..\openssl\libssl-1_1.dll"      target="build\native\bin\" />
+        <file src="..\openssl\libcrypto-1_1.dll"   target="build\native\bin\" />
     </files>
 </package>

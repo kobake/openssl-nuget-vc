@@ -1,20 +1,17 @@
-# openssl-vc141-nuget
-OpenSSL library nuget package for Visual Studio 2017 C++ (msvc141) Project.
+# openssl-nuget-vc
+[OpenSSL](https://github.com/openssl/openssl) library NuGet packages building workspace.
 
-## Nuget Gallery
+## For Visual Studio 2019 (vc142)
+- [NuGet Gallery | openssl-vc142 1.1.0](https://www.nuget.org/packages/openssl-vc142)
+
+## For Visual Studio 2017 (vc141)
 - [NuGet Gallery | openssl-vc141 1.1.0](https://www.nuget.org/packages/openssl-vc141)
 
-## Usage
-Run the following command in the Package Manager Console on Visual Studio 2017.
-```
-PM> Install-Package openssl-vc141
-```
-
 ## How to package (for Package Owner)
-Run the commands below on the Developer Command Prompt for VS 2017.
+Run the commands below on a Command Prompt.
 ```
-build-win32.bat
+build.bat
 
-cd packaging\nuget
+cd packaging\nuget-vc142
 package.bat
 ```

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+    <metadata minClientVersion="2.5">
+        <id>openssl-vc142</id>
+        <title>openssl-vc142</title>
+        <version>1.1.0</version>
+        <authors>The OpenSSL Project</authors>
+        <owners>kobake</owners>
+        <license type="expression">Apache-2.0</license>
+        <projectUrl>https://github.com/kobake/openssl-nuget-vc</projectUrl>
+        <icon>logo.png</icon>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <summary>OpenSSL for vc142. Compiler: VS 2019 16.5.4.</summary>
+        <description>OpenSSL library, packaged for Visual Studio 2019 (vc142). Compiler: Visual Studio 2019 16.5.4.</description>
+        <releaseNotes>OpenSSL 1.1.0e https://www.openssl.org/news/changelog.html</releaseNotes>
+        <copyright>Copyright 2019</copyright>
+        <tags>native,openssl,ssl,C,C++</tags>
+        <dependencies>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="logo.png"                          target="" />
+
+        <file src="package.targets"                   target="build\native\openssl-vc142.targets" />
+
+        <file src="..\..\openssl\include\openssl\*.h" target="build\native\include\openssl\" />
+
+        <file src="..\bin_x86\libssl.lib"             target="build\native\bin\libssl-vc142-x86-1_1_0.lib" />
+        <file src="..\bin_x86\libcrypto.lib"          target="build\native\bin\libcrypto-vc142-x86-1_1_0.lib" />
+        <file src="..\bin_x86\libssl-1_1.dll"         target="build\native\bin\libssl-vc142-x86-1_1_0.dll" />
+        <file src="..\bin_x86\libcrypto-1_1.dll"      target="build\native\bin\libcrypto-vc142-x86-1_1_0.dll" />
+
+        <file src="..\bin_x64\libssl.lib"             target="build\native\bin\libssl-vc142-x64-1_1_0.lib" />
+        <file src="..\bin_x64\libcrypto.lib"          target="build\native\bin\libcrypto-vc142-x64-1_1_0.lib" />
+        <file src="..\bin_x64\libssl-1_1-x64.dll"     target="build\native\bin\libssl-vc142-x64-1_1_0.dll" />
+        <file src="..\bin_x64\libcrypto-1_1-x64.dll"  target="build\native\bin\libcrypto-vc142-x64-1_1_0.dll" />
+    </files>
+</package>
